@@ -166,3 +166,47 @@
     color: var(--color-foreground);
   }
 }
+
+@utility shadow-brutal {
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
+
+@utility shadow-brutal-sm {
+  box-shadow: 3px 3px 0 0 var(--ink);
+}
+
+@utility shadow-brutal-lg {
+  box-shadow: 10px 10px 0 0 var(--ink);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--brand-yellow);
+    color: var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
